@@ -8,27 +8,37 @@
     <body>
         <header>
             <h1>Creaciòn de cursos</h1>
-            <form action="/cursos" method="POST">
+            <form action="/CrearCursos" method="POST">
                 <table>
                     <tr>
                         <td><label>Id</label></td>
-                        <td><input type="number" name="Id"></td>
+                        <td><input type="number" name="id"></td>
                     </tr>
                     <tr>
                         <td><label>Nombre</label></td>
-                        <td><input type="text" name="Nombre"></td>
+                        <td><input type="text" name="nombre"></td>
                     </tr>
                     <tr>
                         <td><label>Descripcion</label></td>
-                        <td><input type="text" name="Descripcion"></td>
+                        <td><input type="text" name="descripcion"></td>
                     </tr>
                     <tr>
                         <td><label>Valor</label></td>
                         <td><input type="number" name="valor"></td>
                     </tr>
+                    <tr>
+                        <td><label>Modalidad</label></td>
+                        <td><select name="modalidad">
+                            <option value="Virtual">Virtual</option>
+                            <option value="Presencial">Presencial</option>
+                        </select></td>
+                    </tr>
                     <tr><td colspan="2"><button>Ingresar</button></td></tr>
                 </table>
-            </form> 
+
+                <label>{{CrearCurso id nombre descripcion valor modalidad}}</label>
+            </form>
+            {{{Listar}}}
         </header>
     </body>
 </html>
