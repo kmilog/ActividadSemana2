@@ -9,6 +9,9 @@
   "author": "Camilo Guerrero",
   "license": "ISC",
   "dependencies": {
-    "express-validator": "^5.3.1"
+    "bootstrap": "^4.3.1",
+    "express-validator": "^5.3.1",
+    "jquery": "^3.4.1",
+    "popper": "^1.0.1"
   }
 }

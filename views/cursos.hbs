@@ -2,43 +2,50 @@
 <html>
     <head>
         <title>Creaciòn de cursos</title>
-        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="/css/bootstrap.min.css" type="">
     </head>
 
     <body>
         <header>
             <h1>Creaciòn de cursos</h1>
-            <form action="/CrearCursos" method="POST">
-                <table>
-                    <tr>
-                        <td><label>Id</label></td>
-                        <td><input type="number" name="id"></td>
-                    </tr>
-                    <tr>
-                        <td><label>Nombre</label></td>
-                        <td><input type="text" name="nombre"></td>
-                    </tr>
-                    <tr>
-                        <td><label>Descripcion</label></td>
-                        <td><input type="text" name="descripcion"></td>
-                    </tr>
-                    <tr>
-                        <td><label>Valor</label></td>
-                        <td><input type="number" name="valor"></td>
-                    </tr>
-                    <tr>
-                        <td><label>Modalidad</label></td>
-                        <td><select name="modalidad">
-                            <option value="Virtual">Virtual</option>
-                            <option value="Presencial">Presencial</option>
-                        </select></td>
-                    </tr>
-                    <tr><td colspan="2"><button>Ingresar</button></td></tr>
-                </table>
+            <div style="align: center">
+                <form action="/CrearCursos" method="POST">
+                    <table>
+                        <tr>
+                            <td><label>Id</label></td>
+                            <td><input type="number" name="id" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label></label>Nombre</label></td>
+                            <td><input type="text" name="nombre" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Descripcion</label></td>
+                            <td><input type="text" name="descripcion" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Valor</label></td>
+                            <td><input type="number" name="valor" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Modalidad</label></td>
+                            <td><select name="modalidad" class="form-control">
+                                <option value="Virtual">Virtual</option>
+                                <option value="Presencial">Presencial</option>
+                            </select></td>
+                        </tr>
+                        <tr><td colspan="2" align="center"><button class="btn btn-primary">Ingresar</button></td></tr>
+                    </table>
 
-                <label>{{CrearCurso id nombre descripcion valor modalidad}}</label>
-            </form>
-            {{{Listar}}}
+                    <label>{{CrearCurso id nombre descripcion valor modalidad error}}</label>
+                </form>
+                {{{Listar}}}
+            </div>
         </header>
+        <script type="javascript" src="js/jquery.min.js"></script>
+        <script type="javascript" src="js/popper.min.js"></script>
+        <script type="javascript" src="js/bootstrap.min.js"></script>
     </body>
 </html>

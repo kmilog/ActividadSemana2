@@ -14,11 +14,11 @@ const listar = () => {
 hbs.registerHelper('CrearCurso', (id, nombre, descripcion, valor, modalidad, error) => {
     listar();
     if(error != undefined){
-        console.log(error.Array);
-        for(let i=0; i < error.length; i++){
-            console.log(error[i]);
-        }
-        return error;
+        var texto = '';
+        error.forEach(element => {
+            texto = texto + ' ' + element.msg;
+        })
+        return texto;
     }
     let cur = {
         id : id,
